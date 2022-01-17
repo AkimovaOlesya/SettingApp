@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-            title = "Settings"
+            title = "Настройки"
             view.addSubview(tableView)
             tableView.delegate = self
             tableView.dataSource = self
