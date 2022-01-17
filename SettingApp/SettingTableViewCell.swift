@@ -14,7 +14,7 @@ class SettingTableViewCell: UITableViewCell {
     private let iconContainer: UIView = {
         let iconContainer = UIView()
         iconContainer.clipsToBounds = true
-        iconContainer.layer.cornerRadius = 10
+        iconContainer.layer.cornerRadius = 8
         iconContainer.layer.masksToBounds = true
 
         return iconContainer
@@ -53,15 +53,15 @@ class SettingTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         let size: CGFloat = contentView.frame.size.height - 12
-        iconContainer.frame = CGRect(x: 10, y: 6, width: size, height: size)
+        iconContainer.frame = CGRect(x: 15, y: 6, width: size, height: size)
 
         let imageSize: CGFloat = size/1.5
-        iconImageView.frame = CGRect(x: 0, y: 0, width: imageSize, height: imageSize)
-        iconImageView.center = iconContainer.center
+        iconImageView.frame = CGRect(x: (size - imageSize)/2, y: (size - imageSize)/2, width: imageSize, height: imageSize)
+     //   iconImageView.center = iconContainer.center
 
-        label.frame = CGRect(x: 15 + iconContainer.frame.size.width,
+        label.frame = CGRect(x: 25 + iconContainer.frame.size.width,
                              y: 0,
-                             width: contentView.frame.size.width - 15 - iconContainer.frame.size.width,
+                             width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
                              height: contentView.frame.size.height)
     }
 
