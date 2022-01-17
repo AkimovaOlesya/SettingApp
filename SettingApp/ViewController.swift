@@ -9,7 +9,20 @@ import UIKit
 
 struct Section {
     let title: String
-    let options: [Settings]
+    let options: [SettingsOptionType]
+}
+
+enum SettingsOptionType {
+    case staticCell(model: Settings)
+    case switchCell(model: SettingsSwitchOption)
+}
+
+struct SettingsSwitchOption {
+    let text: String
+    let image: UIImage?
+    let imageBackgroundColor: UIColor
+    let handler: (() -> Void)
+    var isOn: Bool
 }
 
 struct Settings {
@@ -24,6 +37,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.identifier)
+        tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: SwitchTableViewCell.identifier)
+        
         return tableView
     }()
 
@@ -42,37 +57,39 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         private func configure() {
             models.append(Section(title: "Связь", options: [
                 
-                Settings(text: "Авиарежим", image: UIImage(systemName: "airplane"), imageBackgroundColor: .systemOrange) {
-                    print("Tapped first cell")
-                },
+                .switchCell(model: SettingsSwitchOption(text: "Авиарежим", image: UIImage(systemName: "airplane"), imageBackgroundColor: .systemRed, handler: {
+                    
+                }, isOn: true))
+                  //  print("Tapped first cell")
+                ,
                 
-                Settings(text: "Wi-Fi", image: UIImage(systemName: "wifi"), imageBackgroundColor: .systemPink) {
-                },
+                .staticCell(model: Settings(text: "Wi-Fi", image: UIImage(systemName: "wifi"), imageBackgroundColor: .systemPink) {
+                }),
                 
-                Settings(text: "Bluetooth", image: UIImage(systemName: "Bluetooth"), imageBackgroundColor: .link) {
-                },
+                .staticCell(model: Settings(text: "Bluetooth", image: UIImage(systemName: "Bluetooth"), imageBackgroundColor: .link) {
+                }),
                 
-                Settings(text: "Сотовая связь", image: UIImage(systemName: "mobile data"), imageBackgroundColor: .systemGreen) {
-                },
+                .staticCell(model: Settings(text: "Сотовая связь", image: UIImage(systemName: "mobile data"), imageBackgroundColor: .systemGreen) {
+                }),
                 
-                Settings(text: "Режим модема", image: UIImage(systemName: "personal hotspot"), imageBackgroundColor: .systemGreen) {
-                },
+                .staticCell(model: Settings(text: "Режим модема", image: UIImage(systemName: "personal hotspot"), imageBackgroundColor: .systemGreen) {
+                }),
                 
             ]))
             models.append(Section(title: "Основные", options: [
                 
-                Settings(text: "Основные", image: UIImage(systemName: "general"), imageBackgroundColor: .systemPink) {
-                },
+                .staticCell(model: Settings(text: "Основные", image: UIImage(systemName: "general"), imageBackgroundColor: .systemPink) {
+                }),
                 
-                Settings(text: "Пункт управления", image: UIImage(systemName: "control station"), imageBackgroundColor: .systemOrange) {
-                },
+                    .staticCell(model: Settings(text: "Пункт управления", image: UIImage(systemName: "control station"), imageBackgroundColor: .systemOrange) {
+                }),
                 
-                Settings(text: "Экран и яркость", image: UIImage(systemName: "screen and brightness"), imageBackgroundColor: .link) {
-                },
+                    .staticCell(model: Settings(text: "Экран и яркость", image: UIImage(systemName: "screen and brightness"), imageBackgroundColor: .link) {
+                }),
                 
-                Settings(text: "Экран домой", image: UIImage(systemName: "screen house"), imageBackgroundColor: .systemGreen) {
+                    .staticCell(model: Settings(text: "Экран домой", image: UIImage(systemName: "screen house"), imageBackgroundColor: .systemGreen) {
 
-                },
+                }),
                 
             ]))
         }
@@ -91,19 +108,39 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let model = models[indexPath.section].options[indexPath.row]
-            guard let cell = tableView.dequeueReusableCell(
-                withIdentifier: SettingTableViewCell.identifier,
-                for: indexPath) as? SettingTableViewCell else {
-                    return UITableViewCell()
+            
+            switch model.self {
+            case .staticCell( let model):
+                guard let cell = tableView.dequeueReusableCell(
+                                withIdentifier: SettingTableViewCell.identifier,
+                                for: indexPath
+                            ) as? SettingTableViewCell else {
+                                return UITableViewCell()
+                            }
+                            cell.configure(with: model)
+                            return cell
+            case .switchCell( let model):
+                guard let cell = tableView.dequeueReusableCell(
+                                withIdentifier: SwitchTableViewCell.identifier,
+                                for: indexPath
+                            ) as? SwitchTableViewCell else {
+                                return UITableViewCell()
+                            }
+                            cell.configure(with: model)
+                            return cell
                 }
-            cell.configure(with: model)
-            return cell
         }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let model = models[indexPath.section].options[indexPath.row]
-        model.handler()
+        let type = models[indexPath.section].options[indexPath.row]
+
+        switch type.self {
+        case .staticCell(let model):
+            model.handler()
+        case .switchCell(let model):
+            model.handler()
+        }
     }
 
 }

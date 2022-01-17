@@ -15,6 +15,8 @@
 		19321C4127916FEC00AE32F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19321C3F27916FEC00AE32F0 /* LaunchScreen.storyboard */; };
 		19C2AD2F2795899100370296 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2AD2D2795899100370296 /* SettingTableViewCell.swift */; };
 		19C2AD302795899100370296 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C2AD2E2795899100370296 /* SettingTableViewCell.xib */; };
+		19C2AD332795D27900370296 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2AD312795D27900370296 /* SwitchTableViewCell.swift */; };
+		19C2AD342795D27900370296 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C2AD322795D27900370296 /* SwitchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		19321C4227916FEC00AE32F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19C2AD2D2795899100370296 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		19C2AD2E2795899100370296 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		19C2AD312795D27900370296 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		19C2AD322795D27900370296 /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				19321C4227916FEC00AE32F0 /* Info.plist */,
 				19C2AD2D2795899100370296 /* SettingTableViewCell.swift */,
 				19C2AD2E2795899100370296 /* SettingTableViewCell.xib */,
+				19C2AD312795D27900370296 /* SwitchTableViewCell.swift */,
+				19C2AD322795D27900370296 /* SwitchTableViewCell.xib */,
 			);
 			path = SettingApp;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19321C4127916FEC00AE32F0 /* LaunchScreen.storyboard in Resources */,
+				19C2AD342795D27900370296 /* SwitchTableViewCell.xib in Resources */,
 				19321C3E27916FEC00AE32F0 /* Assets.xcassets in Resources */,
 				19C2AD302795899100370296 /* SettingTableViewCell.xib in Resources */,
 				19321C3C27916FEB00AE32F0 /* Main.storyboard in Resources */,
@@ -147,6 +154,7 @@
 			files = (
 				19321C3927916FEB00AE32F0 /* ViewController.swift in Sources */,
 				19321C3527916FEB00AE32F0 /* AppDelegate.swift in Sources */,
+				19C2AD332795D27900370296 /* SwitchTableViewCell.swift in Sources */,
 				19C2AD2F2795899100370296 /* SettingTableViewCell.swift in Sources */,
 				19321C3727916FEB00AE32F0 /* SceneDelegate.swift in Sources */,
 			);
