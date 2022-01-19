@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     print("Нажата ячейка Wi-Fi")
                 }),
                 
-                .staticCell(model: Settings(text: "Bluetooth", image: UIImage(systemName: "Bluetooth"), imageBackgroundColor: .systemBlue) {
+                .staticCell(model: Settings(text: "Bluetooth", image: UIImage(named: "bluetooth"), imageBackgroundColor: .systemBlue) {
                     print("Нажата ячейка Bluetooth")
                 }),
                 
