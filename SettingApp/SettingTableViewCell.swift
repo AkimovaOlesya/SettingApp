@@ -53,18 +53,24 @@ class SettingTableViewCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        let size: CGFloat = contentView.frame.size.height - 12
-        iconContainer.frame = CGRect(x: 15, y: 6, width: size, height: size)
+        iconContainer.translatesAutoresizingMaskIntoConstraints = false
+                iconContainer.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -160).isActive = true
+                iconContainer.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+                iconContainer.heightAnchor.constraint(equalTo: contentView.heightAnchor, constant: -12).isActive = true
+                iconContainer.widthAnchor.constraint(equalTo: contentView.heightAnchor, constant: -12).isActive = true
 
-        let imageSize: CGFloat = size/1.5
-        iconImageView.frame = CGRect(x: (size - imageSize)/2, y: (size - imageSize)/2, width: imageSize, height: imageSize)
-     //   iconImageView.center = iconContainer.center
+                iconImageView.translatesAutoresizingMaskIntoConstraints = false
+                iconImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -160).isActive = true
+                iconImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+                iconImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, constant: -18).isActive = true
+                iconImageView.widthAnchor.constraint(equalTo: contentView.heightAnchor, constant: -18).isActive = true
 
-        label.frame = CGRect(x: 25 + iconContainer.frame.size.width,
-                             y: 0,
-                             width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
-                             height: contentView.frame.size.height)
-    }
+                label.translatesAutoresizingMaskIntoConstraints = false
+                label.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 57).isActive = true
+                label.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+                label.heightAnchor.constraint(equalTo: contentView.heightAnchor, constant: -20).isActive = true
+                label.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
+ }
 
     override func prepareForReuse() {
         super.prepareForReuse()
