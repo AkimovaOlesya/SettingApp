@@ -17,7 +17,6 @@
 		19C2AD302795899100370296 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C2AD2E2795899100370296 /* SettingTableViewCell.xib */; };
 		19C2AD332795D27900370296 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2AD312795D27900370296 /* SwitchTableViewCell.swift */; };
 		19C2AD342795D27900370296 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C2AD322795D27900370296 /* SwitchTableViewCell.xib */; };
-		19C2AD362797D98200370296 /* bluetooth.png in Resources */ = {isa = PBXBuildFile; fileRef = 19C2AD352797D98200370296 /* bluetooth.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		19C2AD2E2795899100370296 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		19C2AD312795D27900370296 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		19C2AD322795D27900370296 /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
-		19C2AD352797D98200370296 /* bluetooth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluetooth.png; path = ../../bluetooth.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 				19321C3827916FEB00AE32F0 /* ViewController.swift */,
 				19321C3A27916FEB00AE32F0 /* Main.storyboard */,
 				19321C3D27916FEC00AE32F0 /* Assets.xcassets */,
-				19C2AD352797D98200370296 /* bluetooth.png */,
 				19321C3F27916FEC00AE32F0 /* LaunchScreen.storyboard */,
 				19321C4227916FEC00AE32F0 /* Info.plist */,
 				19C2AD2D2795899100370296 /* SettingTableViewCell.swift */,
@@ -140,7 +137,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19C2AD362797D98200370296 /* bluetooth.png in Resources */,
 				19321C4127916FEC00AE32F0 /* LaunchScreen.storyboard in Resources */,
 				19C2AD342795D27900370296 /* SwitchTableViewCell.xib in Resources */,
 				19321C3E27916FEC00AE32F0 /* Assets.xcassets in Resources */,
