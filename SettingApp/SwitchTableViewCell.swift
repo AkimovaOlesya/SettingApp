@@ -22,7 +22,8 @@ class SwitchTableViewCell: UITableViewCell {
 
     private let iconImageView: UIImageView = {
         let iconImageView = UIImageView()
-        iconImageView.backgroundColor = .white
+        iconImageView.backgroundColor = .none
+        iconImageView.tintColor = .white
         iconImageView.contentMode = .scaleAspectFit
 
         return iconImageView

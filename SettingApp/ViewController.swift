@@ -46,6 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         configure()
             title = "Настройки"
             view.addSubview(tableView)
@@ -55,40 +56,70 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
 
         private func configure() {
-            models.append(Section(title: "Связь", options: [
+            models.append(Section(title: "", options: [
                 
-                .switchCell(model: SettingsSwitchOption(text: "Авиарежим", image: UIImage(systemName: "airplane"), imageBackgroundColor: .systemRed, handler: {
-                    
-                }, isOn: true))
-                  //  print("Tapped first cell")
-                ,
+                .switchCell(model: SettingsSwitchOption(text: "Авиарежим", image: UIImage(systemName: "airplane"), imageBackgroundColor: .systemOrange, handler: {
+                    print("Нажата ячейка Авиарежим")
+                }, isOn: false)),
                 
-                .staticCell(model: Settings(text: "Wi-Fi", image: UIImage(systemName: "wifi"), imageBackgroundColor: .systemPink) {
+                .staticCell(model: Settings(text: "Wi-Fi", image: UIImage(systemName: "wifi"), imageBackgroundColor: .systemBlue) {
+                    print("Нажата ячейка Wi-Fi")
                 }),
                 
-                .staticCell(model: Settings(text: "Bluetooth", image: UIImage(systemName: "Bluetooth"), imageBackgroundColor: .link) {
+                .staticCell(model: Settings(text: "Bluetooth", image: UIImage(systemName: "Bluetooth"), imageBackgroundColor: .systemBlue) {
+                    print("Нажата ячейка Bluetooth")
                 }),
                 
-                .staticCell(model: Settings(text: "Сотовая связь", image: UIImage(systemName: "mobile data"), imageBackgroundColor: .systemGreen) {
+                .staticCell(model: Settings(text: "Сотовая связь", image: UIImage(systemName: "antenna.radiowaves.left.and.right"), imageBackgroundColor: .systemGreen) {
+                    print("Нажата ячейка Сотовая связь")
                 }),
                 
-                .staticCell(model: Settings(text: "Режим модема", image: UIImage(systemName: "personal hotspot"), imageBackgroundColor: .systemGreen) {
+                .staticCell(model: Settings(text: "Режим модема", image: UIImage(systemName: "personalhotspot"), imageBackgroundColor: .systemGreen) {
+                    print("Нажата ячейка Режим модема")
+                }),
+                
+                    .switchCell(model: SettingsSwitchOption(text: "VPN", image: UIImage(systemName: "globe"), imageBackgroundColor: .systemBlue, handler: {
+                        print("Нажата ячейка VPN")
+                    }, isOn: false)),
+                
+            ]))
+            
+            models.append(Section(title: "", options: [
+                
+                .staticCell(model: Settings(text: "Уведомления", image: UIImage(systemName: "bell.badge.fill"), imageBackgroundColor: .systemRed) {
+                    print("Нажата ячейка Уведомления")
+
+                }),
+                
+                    .staticCell(model: Settings(text: "Звуки, тактильные сигналы", image: UIImage(systemName: "speaker.wave.3.fill"), imageBackgroundColor: .systemPink) {
+                        print("Нажата ячейка Пункт управления")
+
+                }),
+                
+                    .staticCell(model: Settings(text: "Не беспокоить", image: UIImage(systemName: "moon.fill"), imageBackgroundColor: .systemPurple) {
+                        print("Нажата ячейка Не беспокоить")
+
+                }),
+                
+                    .staticCell(model: Settings(text: "Экранное время", image: UIImage(systemName: "hourglass"), imageBackgroundColor: .systemPurple) {
+                        print("Нажата ячейка Экранное время")
+
                 }),
                 
             ]))
-            models.append(Section(title: "Основные", options: [
+            
+            models.append(Section(title: "", options: [
                 
-                .staticCell(model: Settings(text: "Основные", image: UIImage(systemName: "general"), imageBackgroundColor: .systemPink) {
+                .staticCell(model: Settings(text: "Основные", image: UIImage(systemName: "gear"), imageBackgroundColor: .systemGray) {
+                    print("Нажата ячейка Основные")
                 }),
                 
-                    .staticCell(model: Settings(text: "Пункт управления", image: UIImage(systemName: "control station"), imageBackgroundColor: .systemOrange) {
+                    .staticCell(model: Settings(text: "Пункт управления", image: UIImage(systemName: "switch.2"), imageBackgroundColor: .systemGray) {
+                        print("Нажата ячейка Пункт управления")
                 }),
                 
-                    .staticCell(model: Settings(text: "Экран и яркость", image: UIImage(systemName: "screen and brightness"), imageBackgroundColor: .link) {
-                }),
-                
-                    .staticCell(model: Settings(text: "Экран домой", image: UIImage(systemName: "screen house"), imageBackgroundColor: .systemGreen) {
-
+                    .staticCell(model: Settings(text: "Экран и яркость", image: UIImage(systemName: "textformat.size"), imageBackgroundColor: .systemBlue) {
+                        print("Нажата ячейка Экран и яркость")
                 }),
                 
             ]))
