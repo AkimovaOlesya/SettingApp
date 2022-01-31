@@ -9,7 +9,7 @@ import UIKit
 
 class SettingTableViewCell: UITableViewCell {
 
-    static let identifier = "SettingTableViewCell"
+    static let identifire = "SettingTableViewCell"
 
     private let iconContainer: UIView = {
         let iconContainer = UIView()
