@@ -18,6 +18,8 @@
 		195B7F3327A7D4D00088ED3B /* SettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195B7F3227A7D4D00088ED3B /* SettingOptions.swift */; };
 		195B7F3527A7D4EC0088ED3B /* SettingSwitchOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195B7F3427A7D4EC0088ED3B /* SettingSwitchOptions.swift */; };
 		195B7F3727A7D50D0088ED3B /* NotificationSettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195B7F3627A7D50C0088ED3B /* NotificationSettingOptions.swift */; };
+		195B7F3A27A7DA630088ED3B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195B7F3927A7DA630088ED3B /* SettingsView.swift */; };
+		195B7F3F27A7DBBD0088ED3B /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195B7F3E27A7DBBD0088ED3B /* NotificationTableViewCell.swift */; };
 		19C2AD2F2795899100370296 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2AD2D2795899100370296 /* SettingTableViewCell.swift */; };
 		19C2AD302795899100370296 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C2AD2E2795899100370296 /* SettingTableViewCell.xib */; };
 		19C2AD332795D27900370296 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2AD312795D27900370296 /* SwitchTableViewCell.swift */; };
@@ -38,7 +40,9 @@
 		195B7F3227A7D4D00088ED3B /* SettingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOptions.swift; sourceTree = "<group>"; };
 		195B7F3427A7D4EC0088ED3B /* SettingSwitchOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSwitchOptions.swift; sourceTree = "<group>"; };
 		195B7F3627A7D50C0088ED3B /* NotificationSettingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingOptions.swift; sourceTree = "<group>"; };
-		19C2AD2D2795899100370296 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		195B7F3927A7DA630088ED3B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		195B7F3E27A7DBBD0088ED3B /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		19C2AD2D2795899100370296 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingTableViewCell.swift; path = ../../../../Resources/SettingTableViewCell.swift; sourceTree = "<group>"; };
 		19C2AD2E2795899100370296 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		19C2AD312795D27900370296 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		19C2AD322795D27900370296 /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
@@ -87,10 +91,6 @@
 				19321C3D27916FEC00AE32F0 /* Assets.xcassets */,
 				19321C3A27916FEB00AE32F0 /* Main.storyboard */,
 				19321C3F27916FEC00AE32F0 /* LaunchScreen.storyboard */,
-				19C2AD2D2795899100370296 /* SettingTableViewCell.swift */,
-				19C2AD2E2795899100370296 /* SettingTableViewCell.xib */,
-				19C2AD312795D27900370296 /* SwitchTableViewCell.swift */,
-				19C2AD322795D27900370296 /* SwitchTableViewCell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -116,6 +116,7 @@
 		195B7F2227A7B5B60088ED3B /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				195B7F3827A7DA470088ED3B /* View */,
 				195B7F2C27A7D45F0088ED3B /* Model */,
 				19321C3827916FEB00AE32F0 /* ViewController.swift */,
 			);
@@ -140,6 +141,27 @@
 				195B7F3627A7D50C0088ED3B /* NotificationSettingOptions.swift */,
 			);
 			path = SettingTypes;
+			sourceTree = "<group>";
+		};
+		195B7F3827A7DA470088ED3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				195B7F3B27A7DAD80088ED3B /* Cells */,
+				195B7F3927A7DA630088ED3B /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		195B7F3B27A7DAD80088ED3B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				19C2AD2E2795899100370296 /* SettingTableViewCell.xib */,
+				19C2AD2D2795899100370296 /* SettingTableViewCell.swift */,
+				19C2AD312795D27900370296 /* SwitchTableViewCell.swift */,
+				19C2AD322795D27900370296 /* SwitchTableViewCell.xib */,
+				195B7F3E27A7DBBD0088ED3B /* NotificationTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				195B7F3F27A7DBBD0088ED3B /* NotificationTableViewCell.swift in Sources */,
 				195B7F3727A7D50D0088ED3B /* NotificationSettingOptions.swift in Sources */,
 				19321C3927916FEB00AE32F0 /* ViewController.swift in Sources */,
 				195B7F3327A7D4D00088ED3B /* SettingOptions.swift in Sources */,
@@ -225,6 +248,7 @@
 				195B7F3127A7D4BA0088ED3B /* SectionModel.swift in Sources */,
 				195B7F3527A7D4EC0088ED3B /* SettingSwitchOptions.swift in Sources */,
 				19321C3727916FEB00AE32F0 /* SceneDelegate.swift in Sources */,
+				195B7F3A27A7DA630088ED3B /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
