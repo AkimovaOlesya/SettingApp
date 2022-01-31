@@ -10,6 +10,7 @@ struct Section {
   let title: String
   let options: [SettingType]
 }
+
 enum SettingType {
   case staticCell(type: SettingOptions)
   case switchCell(type: SettingSwitchOptions)
