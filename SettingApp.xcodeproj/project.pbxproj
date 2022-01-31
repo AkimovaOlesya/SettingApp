@@ -78,6 +78,7 @@
 		19321C3327916FEB00AE32F0 /* SettingApp */ = {
 			isa = PBXGroup;
 			children = (
+				195B7F2127A7B5AE0088ED3B /* App */,
 				195B7F2027A7B5A20088ED3B /* Sources */,
 				195B7F1F27A7B5950088ED3B /* Resources */,
 			);
@@ -99,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				195B7F2227A7B5B60088ED3B /* Scene */,
-				195B7F2127A7B5AE0088ED3B /* App */,
 			);
 			path = Sources;
 			sourceTree = "<group>";

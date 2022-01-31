@@ -79,10 +79,10 @@ class SettingTableViewCell: UITableViewCell {
         iconContainer.backgroundColor = nil
     }
 
-    public func configure(with model: Settings) {
-        label.text = model.text
-        iconImageView.image = model.image
-        iconContainer.backgroundColor = model.imageBackgroundColor
+    public func configure(with model: SettingOptions) {
+        label.text = model.title
+        iconImageView.image = model.icon
+        iconContainer.backgroundColor = model.iconBackgroundColor
     }
 
 }
