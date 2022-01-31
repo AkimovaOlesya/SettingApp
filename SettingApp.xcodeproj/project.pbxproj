@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		19321C3527916FEB00AE32F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19321C3427916FEB00AE32F0 /* AppDelegate.swift */; };
 		19321C3727916FEB00AE32F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19321C3627916FEB00AE32F0 /* SceneDelegate.swift */; };
-		19321C3927916FEB00AE32F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19321C3827916FEB00AE32F0 /* ViewController.swift */; };
 		19321C3C27916FEB00AE32F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19321C3A27916FEB00AE32F0 /* Main.storyboard */; };
 		19321C3E27916FEC00AE32F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19321C3D27916FEC00AE32F0 /* Assets.xcassets */; };
 		19321C4127916FEC00AE32F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19321C3F27916FEC00AE32F0 /* LaunchScreen.storyboard */; };
@@ -20,6 +19,7 @@
 		195B7F3727A7D50D0088ED3B /* NotificationSettingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195B7F3627A7D50C0088ED3B /* NotificationSettingOptions.swift */; };
 		195B7F3A27A7DA630088ED3B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195B7F3927A7DA630088ED3B /* SettingsView.swift */; };
 		195B7F3F27A7DBBD0088ED3B /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195B7F3E27A7DBBD0088ED3B /* NotificationTableViewCell.swift */; };
+		195B7F4327A7DE640088ED3B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195B7F4227A7DE640088ED3B /* SettingViewController.swift */; };
 		19C2AD2F2795899100370296 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2AD2D2795899100370296 /* SettingTableViewCell.swift */; };
 		19C2AD302795899100370296 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C2AD2E2795899100370296 /* SettingTableViewCell.xib */; };
 		19C2AD332795D27900370296 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2AD312795D27900370296 /* SwitchTableViewCell.swift */; };
@@ -30,7 +30,6 @@
 		19321C3127916FEB00AE32F0 /* SettingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SettingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19321C3427916FEB00AE32F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19321C3627916FEB00AE32F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		19321C3827916FEB00AE32F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19321C3B27916FEB00AE32F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19321C3D27916FEC00AE32F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19321C4027916FEC00AE32F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		195B7F3627A7D50C0088ED3B /* NotificationSettingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingOptions.swift; sourceTree = "<group>"; };
 		195B7F3927A7DA630088ED3B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		195B7F3E27A7DBBD0088ED3B /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		195B7F4227A7DE640088ED3B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		19C2AD2D2795899100370296 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingTableViewCell.swift; path = ../../../../Resources/SettingTableViewCell.swift; sourceTree = "<group>"; };
 		19C2AD2E2795899100370296 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		19C2AD312795D27900370296 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,9 +116,9 @@
 		195B7F2227A7B5B60088ED3B /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				195B7F4027A7DDF60088ED3B /* Controller */,
 				195B7F3827A7DA470088ED3B /* View */,
 				195B7F2C27A7D45F0088ED3B /* Model */,
-				19321C3827916FEB00AE32F0 /* ViewController.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -162,6 +162,14 @@
 				195B7F3E27A7DBBD0088ED3B /* NotificationTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		195B7F4027A7DDF60088ED3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				195B7F4227A7DE640088ED3B /* SettingViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +247,6 @@
 			files = (
 				195B7F3F27A7DBBD0088ED3B /* NotificationTableViewCell.swift in Sources */,
 				195B7F3727A7D50D0088ED3B /* NotificationSettingOptions.swift in Sources */,
-				19321C3927916FEB00AE32F0 /* ViewController.swift in Sources */,
 				195B7F3327A7D4D00088ED3B /* SettingOptions.swift in Sources */,
 				19321C3527916FEB00AE32F0 /* AppDelegate.swift in Sources */,
 				195B7F2F27A7D4950088ED3B /* SettingModel.swift in Sources */,
@@ -249,6 +256,7 @@
 				195B7F3527A7D4EC0088ED3B /* SettingSwitchOptions.swift in Sources */,
 				19321C3727916FEB00AE32F0 /* SceneDelegate.swift in Sources */,
 				195B7F3A27A7DA630088ED3B /* SettingsView.swift in Sources */,
+				195B7F4327A7DE640088ED3B /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
